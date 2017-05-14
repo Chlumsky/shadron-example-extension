@@ -1,0 +1,5 @@
+
+#extension example
+
+image ImageTest = example();
+animation AnimationTest = example();
