@@ -8,10 +8,17 @@ to make sure you use the API correctly.
 
 ## Build and installation
 
-Use Microsoft Visual Studio 2015 to build the project in release configuration,
+### Windows
+
+Use Microsoft Visual Studio 2015 or later to build the project in release configuration,
 and run `install-to-shadron.bat` to copy the DLL to the appropriate location.
-Shadron searches for extensions in `extensions` directory in its own directory,
+Shadron searches for extensions in the `extensions` subdirectory within its own directory,
 and in `%APPDATA%\Shadron\extensions`.
+
+### Mac
+
+Run `make` to build `shadron-example.dylib` and then run `make install`, which will
+copy it to `~/.config/Shadron/extensions` where it will be detected by Shadron.
 
 ## Usage
 
@@ -19,9 +26,9 @@ To use an extension in a script, it must first be enabled with the `#extension` 
 
     #extension example
 
-Now, you may generate an image or an animation with the extension like this:
+Now, you may generate an example image or an animation with this extension like so:
 
     image ImageTest = example();
     animation AnimationTest = example();
 
-Try out the [extension test](extension-test.shadron) script, which does this.
+You can use the premade [extension test](extension-test.shadron) script, which does this.
